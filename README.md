@@ -85,6 +85,7 @@ function getChar(event) {
     return null;
   }
 }
+getChar(event || window.event);
 
 
 # References
