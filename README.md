@@ -14,6 +14,8 @@ mathematical, logical
 # DOM manipulation
 document, window objects
 document.getElementById(), document.queryForSelectedEleements()
+window.location.href, window.location.hostname, window.location.path, window.location.reload(true)
+hostory.forward(), history.back(), history.go(2); // to jump forward and backward thru history
 
 # Math library
 Math.floor(Math.random()*10)+1)
@@ -94,7 +96,7 @@ document.body.onmousemove = function(e) {
     posX = e.clientX + document.body.scollLeft + document.documentElement.scrollLeft;
     posY = e.clientY + document.body.scollTop + document.documentElement.scrollTop;
   }
-  return {"positionX": posX, "positionY": posY};
+  rvar coordinates = {"positionX": posX, "positionY": posY};
 }
 
 
