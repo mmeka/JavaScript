@@ -11,8 +11,6 @@ mathematical, logical
 ===, ==
 !==, !=
 
-# Arrays
-
 # DOM manipulation
 document, window objects
 document.getElementById(), document.queryForSelectedEleements()
@@ -40,6 +38,16 @@ indexOf()
 .charAt(index)
 
 # Date library
+
+# Objects
+For loop to loop thru properties in an object.
+
+# Arrays
+.splice()
+.valueOf() // to perform toString
+.join(<delimiter_value>) // to print all elements as a string with a deliiter
+
+# Event handling
 
 # References
 https://developer.mozilla.org/en-US/docs/Web/JavaScript
