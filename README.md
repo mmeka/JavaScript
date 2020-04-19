@@ -43,6 +43,8 @@ indexOf()
 For loop to loop thru properties in an object.
 
 # Arrays
+.length
+.toString()
 .splice()
 .valueOf() // to perform toString
 .join(<delimiter_value>) // to print all elements as a string with a deliiter
@@ -59,8 +61,31 @@ delete array[index]
 function wrapperFunction(function, value) {
   return function(value);
 }
+Masterize recursion
+
+# New object creation
+this, new, constructors
+
+# Console
+
+# Debugging
+
+# Alerts
+alert();
+var value = prompt("message", default_value);
 
 # Event handling
+<a href="JavaScript:void(0)" />
+function getChar(event) {
+  if(event.which==null) { // For IE browser
+    return String.fromCharCode(event.keyCode);
+  } else if(event.which==null) { // For any browser other than IE
+    return String.fromCharCode(event.which);
+  } else {
+    return null;
+  }
+}
+
 
 # References
 https://developer.mozilla.org/en-US/docs/Web/JavaScript
