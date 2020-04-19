@@ -85,7 +85,7 @@ function getChar(event) {
     return null;
   }
 }
-getChar(event || window.event);
+var char = getChar(event || window.event); if(!char) return false;
 
 
 # References
