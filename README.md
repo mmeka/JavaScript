@@ -46,6 +46,19 @@ For loop to loop thru properties in an object.
 .splice()
 .valueOf() // to perform toString
 .join(<delimiter_value>) // to print all elements as a string with a deliiter
+delete array[index]
+.sort() // NOTE that sort() works only on strings to sort in alphabetical order. How to reverse sort?
+.sort(array,function(x,y){return x-y;})
+.concat(<second_array>)
+.pop()
+.push(element1, element2, ...)
+.shift() // deletes first element and moves remaining items forward
+.unshift(element) // add element(s) to the beginning and moves remaining items backward
+
+# Functions
+function wrapperFunction(function, value) {
+  return function(value);
+}
 
 # Event handling
 
