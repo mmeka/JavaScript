@@ -87,6 +87,16 @@ function getChar(event) {
 }
 var char = getChar(event || window.event); if(!char) return false;
 
+document.body.onmousemove = function(e) {
+  var posX = e.pageX;
+  var posY = e.pageY;
+  if(posX==undefined) {
+    posX = e.clientX + document.body.scollLeft + document.documentElement.scrollLeft;
+    posY = e.clientY + document.body.scollTop + document.documentElement.scrollTop;
+  }
+  return {"positionX": posX, "positionY": posY};
+}
+
 
 # References
 https://developer.mozilla.org/en-US/docs/Web/JavaScript
