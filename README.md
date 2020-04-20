@@ -46,6 +46,7 @@ indexOf()
 # Date library
 
 # Objects
+Pass-in-by reference.  How to deep copy the objects?
 For loop to loop thru properties in an object.
 delete object.property
 if(object.hasOwnProperty(property)){} OR property in object
@@ -89,6 +90,7 @@ delete array[index]
 .push(element1, element2, ...)
 .shift() // deletes first element and moves remaining items forward
 .unshift(element) // add element(s) to the beginning and moves remaining items backward
+How to deep copy the arrays?
 
 # Functions
 function wrapperFunction(function, value) {
