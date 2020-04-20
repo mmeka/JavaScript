@@ -6,6 +6,8 @@ Number.MAX_VALUE, Number.MIN_VALUE
 NOTE that anything over 16 digits in decimal value, precision is lost and the number is rounded off.
 <number_variable>.toFixed(12);
 
+let vs var vs const in scoping? how to we define these scoping for properties inside an object?
+
 # Operators
 mathematical, logical
 ===, ==
@@ -38,11 +40,40 @@ indexOf()
 .substr(startIndex, numberOfChars)
 .replace(stringToReplace, replacement)
 .charAt(index)
+"regex".test(value)
+
 
 # Date library
 
 # Objects
 For loop to loop thru properties in an object.
+delete object.property
+if(object.hasOwnProperty(property)){} OR property in object
+
+Constructor#1
+function Customer(name, age) {
+  console.log('this' + this);
+  this.name = name;
+  this.age = age;
+  this.sayHello = function() {
+    console.log('Hello '+this.name);
+  }
+}
+var cust1 = new Customer("customer name", 12); // when called with 'new' keyword, 'this' represents that class and also 'return this;' happens automatically. When 'new' isn't used, 'this' represents Window object.
+NOTE that in order to create a static property, shared across all the objects of type Customer, use Customer.prototype.sharedValue1=false;
+Customer.prototype.toString = function() { // say hello };
+
+Factory pattern
+function createCircle(radius) {
+  return {
+    radius: radius,
+    draw: function() {
+      console.log('hiiii);
+    }
+  };
+}
+let circle = createCircle(190);
+
 
 # Arrays
 .length
@@ -96,9 +127,32 @@ document.body.onmousemove = function(e) {
     posX = e.clientX + document.body.scollLeft + document.documentElement.scrollLeft;
     posY = e.clientY + document.body.scollTop + document.documentElement.scrollTop;
   }
-  rvar coordinates = {"positionX": posX, "positionY": posY};
+  var coordinates = {"positionX": posX, "positionY": posY};
 }
 
+// on page load
+function() {
+  var mie = navigator.appname == 'Microsoft Internet Explorer';
+  if(!mie) {
+    document.captureEvent(Event.MOUSEMOVE);
+    document.captureEvent(Event.MOUSEDOWN);
+  }
+  document.onmousemove = movepos;
+  document.onmousedown = mouseDown;
+  var positionX = 0;
+  var positionY = 0;
+  function movepos(e) {
+    if(!mie) {
+      positionX = e.pageX;
+      positionY = e.pageY;
+    } else {
+      positionX = e.clientX + document.body.scrollLeft;
+      positionY = e.clientY + document.body.scrollTop;
+    }
+    return true;
+  }
+
+}();
 
 # References
 https://developer.mozilla.org/en-US/docs/Web/JavaScript
