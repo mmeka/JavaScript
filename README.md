@@ -162,6 +162,10 @@ function() {
 
 }();
 
+# Closures
+scopes - lexical scope
+closure?
+
 # References
 https://developer.mozilla.org/en-US/docs/Web/JavaScript
 https://www.youtube.com/watch?v=fju9ii8YsGs&t=252s (Derek Benas fundamentals)
