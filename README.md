@@ -46,12 +46,16 @@ indexOf()
 # Date library
 
 # Objects
+Object in JavaScript vs Object in Java?
+getters and setters?
+prototype? prototype inheritence?
 Pass-in-by reference.  How to deep copy the objects?
 For loop to loop thru properties in an object.
 delete object.property
 if(object.hasOwnProperty(property)){} // to check for property defined in object, not prototype
-if(property in object) {}
+if('property' in object) {}
 if(typeof object[property]!=='function'){}
+Object.keys(object)
 
 Constructor#1
 function Customer(name, age) {
