@@ -25,6 +25,7 @@ Math.max(...array1)
 Math.max(num1, num2, ...)
 
 # String function
+String literals can be wrapped with '', "" or `` (`` is used to contain multiple lines of text or wrap variables like `hello ${name}`)
 parseInt("10")
 parseFloat("10.13")
 Number("9")
